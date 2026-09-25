@@ -742,7 +742,7 @@ self["${t}"]();`,
                     return new Worker(URL.createObjectURL(a),t);
                 throw new Error("missing script: " + e)
             }
-            const i = new URL(e)
+            const i = new URL(e, this._runtimeBaseUrl || document.baseURI)
               , s = location.origin !== i.origin;
             if (s) {
                 const r = await fetch(i);
