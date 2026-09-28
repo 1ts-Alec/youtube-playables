@@ -192,7 +192,7 @@ var ytgamehelper = {
     if (this.isDebug || this.urlParams.get("eruda") === "true") {
       (function () {
         var script = document.createElement("script");
-        // script.src = "//cdn.jsdelivr.net/npm/eruda";
+        // script.src = "//raw.esm.sh/eruda";
         script.src = "eruda.js";
         document.body.appendChild(script);
         script.onload = function () {
