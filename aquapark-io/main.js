@@ -9,6 +9,7 @@ var warningBanner = document.querySelector("#unity-warning");
 
 var clickedFake = false;
 var fakePreloadComplete = false;
+var playBtnClicked = false;
 var firstFrameSent = false;
 var gameReady = false;
 var internetSpeed = 0;
@@ -267,7 +268,7 @@ var config = {
     dataUrl: buildUrl + "/aquapark_v1.5.data.unityweb",
     frameworkUrl: buildUrl + "/aquapark_v1.5.framework.js.unityweb",
     codeUrl: buildUrl + "/aquapark_v1.5.wasm.unityweb",
-    streamingAssetsUrl: "StreamingAssets",
+    streamingAssetsUrl: new URL("StreamingAssets", document.baseURI).href,
     companyName: "Cassette",
     productName: "Aquapark.io",
     productVersion: "6.14.0",
